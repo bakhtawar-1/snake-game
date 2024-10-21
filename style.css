@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background-image: url(../snk.png);
+    min-height: 100vh;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    background-repeat: no-repeat ;
+}
+
+#board{
+   /* border: 5px solid rgb(115, 28, 28);*/
+    display: grid;
+    margin-left: 190px;
+    margin-top: 80px;
+    background: linear-gradient(rgba(0,100,0,0.9), rgba(139,69,19,0.9));
+    width: 100vmin;
+    height: 82vmin;
+    border-radius: 2%;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+}
+
+.head {
+    background: linear-gradient(rgb(255, 200, 0), rgb(39, 17, 39));
+    border-radius: 50%;
+    position: relative; 
+}
+
+.head::before {
+    content: ''; 
+    position: absolute;
+    top: 35%;  
+    right: 70%; 
+    width: 20%; 
+    height: 20%;
+    background-color: black; 
+    border-radius: 50%; 
+}
+
+
+.food {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%;
+}
+
+.food::before {
+    content: '🐣'; 
+    font-size: 6vmin; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.snk{
+    background: linear-gradient(rgb(255, 200, 0),rgb(39, 17, 39));
+    border-radius: 30%;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    color: rgb(222, 246, 125);
+    font-family:'Times New Roman', Times, serif;
+}
+
+#highscoreBox{
+    position: absolute;
+    top: 49px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    color: rgb(222, 246, 125);;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(rgba(0,100,0,0.9), rgba(139,69,19,0.9));
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
